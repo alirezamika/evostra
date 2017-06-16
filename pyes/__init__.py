@@ -12,12 +12,16 @@ class EvolutionStrategy(object):
         self.LEARNING_RATE = learning_rate
 
 
-    def get_weights_try(self, w, p):
+    def _get_weights_try(self, w, p):
         weights_try = []
         for index, i in enumerate(p):
             jittered = self.SIGMA*i
             weights_try.append(w[index] + jittered)
         return weights_try
+
+
+    def get_weights(self):
+        return self.weights
 
 
     def run(self, iterations, print_step=10):
@@ -35,7 +39,7 @@ class EvolutionStrategy(object):
                 population.append(x)
 
             for i in xrange(self.POPULATION_SIZE):
-                weights_try = self.get_weights_try(self.weights, population[i])
+                weights_try = self._get_weights_try(self.weights, population[i])
                 rewards[i] = self.get_reward(weights_try)
 
             rewards = (rewards - np.mean(rewards)) / np.std(rewards)

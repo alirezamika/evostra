@@ -21,7 +21,7 @@ Install from PyPI:
 
     $ sudo pip install pyes
     
-(Use python3 or pip3 for python3)
+(You may need to use python3 or pip3 for python3)
 
 
 Usage

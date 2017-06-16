@@ -33,6 +33,7 @@ Here we use Keras to build the model and we pass its weights to ES.
 
     from pyes import EvolutionStrategy
     from keras.models import Model, Input
+    from keras.layers import Dense
     from keras.optimizers import Adam # not important as there's no training here.
     import numpy as np
     

@@ -6,6 +6,7 @@ You can learn more about it at https://blog.openai.com/evolution-strategies/
 
 Installation
 --------
+It's compatible with both python2 and python3.
 
 Install from source:
 
@@ -20,6 +21,8 @@ Install from PyPI:
 
     $ sudo pip install pyes
     
+(Use python3 or pip3 for python3)
+
 
 Usage
 --------

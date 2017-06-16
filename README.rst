@@ -1,4 +1,4 @@
-pyes: Evolution Strategy for Python
+Evostra: Evolution Strategy for Python
 --------
 
 Evolutio Strategy (ES) is an optimization technique based on ideas of adaptation and evolution.
@@ -19,7 +19,7 @@ Install from PyPI:
 
 .. code-block:: bash
 
-    $ sudo pip install pyes
+    $ sudo pip install evostra
     
 (You may need to use python3 or pip3 for python3)
 
@@ -34,7 +34,7 @@ Here we use Keras to build the model and we pass its weights to ES.
 
 .. code:: python
 
-    from pyes import EvolutionStrategy
+    from evostra import EvolutionStrategy
     from keras.models import Model, Input
     from keras.layers import Dense
     from keras.optimizers import Adam # not important as there's no training here.

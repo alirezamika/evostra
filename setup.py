@@ -8,14 +8,14 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='pyes',
+    name='evostra',
 
     version='1.0.0',
 
     description='Evolution Strategy Solver in Python',
     long_description=long_description,
 
-    url='https://github.com/alirezamika/pyes',
+    url='https://github.com/alirezamika/evostra',
 
     author='Alireza Mika',
     author_email='alirezamika@gmail.com',

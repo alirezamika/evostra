@@ -27,7 +27,7 @@ Install from PyPI:
 Usage
 --------
 
-The input weights of the EvolutionStrategy module is a list of arrays (one array with any shape for each layer of the neural network), so we can use any framework for builing the model and just pass the weights to ES.
+The input weights of the EvolutionStrategy module is a list of arrays (one array with any shape for each layer of the neural network), so we can use any framework to build the model and just pass the weights to ES.
 
 
 Here we use Keras to build the model and we pass its weights to ES.

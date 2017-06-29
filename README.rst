@@ -24,6 +24,12 @@ Install from PyPI:
 (You may need to use python3 or pip3 for python3)
 
 
+Samples
+--------
+An AI agent learning to play flappy bird using evostra:
+https://github.com/alirezamika/flappybird-es
+
+
 Usage
 --------
 

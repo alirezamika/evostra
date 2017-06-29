@@ -24,7 +24,7 @@ Install from PyPI:
 (You may need to use python3 or pip3 for python3)
 
 
-Samples Usages
+Sample Usages
 --------
 
 `An AI agent learning to play flappy bird using evostra 
@@ -35,7 +35,7 @@ Samples Usages
 <https://github.com/alirezamika/bipedal-es>`_
 
 
-Usage
+How to use
 --------
 
 The input weights of the EvolutionStrategy module is a list of arrays (one array with any shape for each layer of the neural network), so we can use any framework to build the model and just pass the weights to ES.

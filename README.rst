@@ -24,10 +24,15 @@ Install from PyPI:
 (You may need to use python3 or pip3 for python3)
 
 
-Samples
+Samples Usages
 --------
-An AI agent learning to play flappy bird using evostra:
-https://github.com/alirezamika/flappybird-es
+
+`An AI agent learning to play flappy bird using evostra 
+<https://github.com/alirezamika/flappybird-es>`_
+
+
+`An AI agent learning to walk using evostra 
+<https://github.com/alirezamika/bipedal-es>`_
 
 
 Usage

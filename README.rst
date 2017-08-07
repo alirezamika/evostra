@@ -108,3 +108,7 @@ Now we have the optimized weights and we can update our model:
     optimized_weights = es.get_weights()
     model.set_weights(optimized_weights)
     
+
+Todo
+--------
+- Add distribution (multi-cpu) support

@@ -81,7 +81,7 @@ Now we can build the EvolutionStrategy object and run it for some iterations:
 
 .. code:: python
 
-    es = EvolutionStrategy(model.get_weights(), get_reward, population_size=50, sigma=0.1, learning_rate=0.001)
+    es = EvolutionStrategy(model.get_weights(), get_reward, population_size=50, sigma=0.1, learning_rate=0.001, decay=0.993)
     es.run(1000, print_step=100)
     
     

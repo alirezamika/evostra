@@ -28,9 +28,6 @@ class EvolutionStrategy(object):
     def run(self, iterations, print_step=10):
         for iteration in range(iterations):
 
-            if iteration % print_step == 0:
-                print('iter %d. reward: %f' % (iteration, self.get_reward(self.weights)))
-
             population = []
             rewards = np.zeros(self.POPULATION_SIZE)
             for i in range(self.POPULATION_SIZE):
@@ -48,5 +45,9 @@ class EvolutionStrategy(object):
             for index, w in enumerate(self.weights):
                 A = np.array([p[index] for p in population])
                 self.weights[index] = w + self.LEARNING_RATE/(self.POPULATION_SIZE*self.SIGMA) * np.dot(A.T, rewards).T
-            
+
             self.LEARNING_RATE *= self.decay
+
+            if (iteration+1) % print_step == 0:
+                print('iter %d. reward: %f' % (iteration+1, self.get_reward(self.weights)))
+

@@ -82,17 +82,6 @@ Here's the output:
 
 .. code::
 
-    iter 0. reward: -68.819312
-    iter 100. reward: -0.218466
-    iter 200. reward: -0.110204
-    iter 300. reward: -0.089003
-    iter 400. reward: -0.078224
-    iter 500. reward: -0.063891
-    iter 600. reward: -0.049090
-    iter 700. reward: -0.027701
-    iter 800. reward: -0.013094
-    iter 900. reward: -0.009140
-
     iter 100. reward: -68.819312
     iter 200. reward: -0.218466
     iter 300. reward: -0.110204

@@ -15,11 +15,18 @@ Install from source:
     $ python setup.py install
 
     
-Install from git repository using pip:
+Install latest version from git repository using pip:
 
 .. code-block:: bash
 
     $ pip install git+https://github.com/alirezamika/evostra.git
+    
+    
+Install from PyPI:
+
+.. code-block:: bash
+
+    $ pip install evostra
     
 (You may need to use python3 or pip3 for python3)
 

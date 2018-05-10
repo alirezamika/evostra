@@ -66,7 +66,7 @@ Now we define our get_reward function:
 .. code:: python
 
     solution = np.array([0.1, -0.4, 0.5])
-    inp = np.asarray([[1,2,3,4,5]])
+    inp = np.asarray([1, 2, 3, 4, 5])
 
     def get_reward(weights):
         global solution, model, inp

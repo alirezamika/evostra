@@ -10,7 +10,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name='evostra',
 
-    version='1.0.1',
+    version='2.0',
 
     description='Evolution Strategy Solver in Python',
     long_description=long_description,

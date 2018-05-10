@@ -12,14 +12,14 @@ Install from source:
 
 .. code-block:: bash
 
-    $ sudo python setup.py install
+    $ python setup.py install
 
     
-Install from PyPI:
+Install from git repository using pip:
 
 .. code-block:: bash
 
-    $ sudo pip install evostra
+    $ pip install git+https://github.com/alirezamika/evostra.git
     
 (You may need to use python3 or pip3 for python3)
 

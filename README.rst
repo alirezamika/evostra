@@ -107,4 +107,4 @@ Now we have the optimized weights and we can update our model:
 
 Todo
 --------
-- Add distribution (multi-cpu) support
+- Add distribution support over network

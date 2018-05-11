@@ -81,7 +81,10 @@ Now we can build the EvolutionStrategy object and run it for some iterations:
 
 .. code:: python
 
-    es = EvolutionStrategy(model.get_weights(), get_reward, population_size=20, sigma=0.1, learning_rate=0.03, decay=0.995)
+    # if your task is computationally expensive, you can use num_threads > 1 to use multiple processes;
+    # if you set num_threads=-1, it will use number of cores available on the machine; Here we use 1 process as the
+    #  task is not computationally expensive and using more processes would decrease the performance due to the IPC overhead.
+    es = EvolutionStrategy(model.get_weights(), get_reward, population_size=20, sigma=0.1, learning_rate=0.03, decay=0.995, num_threads=1)
     es.run(1000, print_step=100)
 
 
@@ -111,4 +114,4 @@ Now we have the optimized weights and we can update our model:
 
 Todo
 --------
-- Add distribution (multi-cpu) support
+- Add distribution support over network

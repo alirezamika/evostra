@@ -15,11 +15,18 @@ Install from source:
     $ python setup.py install
 
     
-Install from git repository using pip:
+Install latest version from git repository using pip:
 
 .. code-block:: bash
 
     $ pip install git+https://github.com/alirezamika/evostra.git
+    
+    
+Install from PyPI:
+
+.. code-block:: bash
+
+    $ pip install evostra
     
 (You may need to use python3 or pip3 for python3)
 
@@ -59,7 +66,7 @@ Now we define our get_reward function:
 .. code:: python
 
     solution = np.array([0.1, -0.4, 0.5])
-    inp = np.asarray([[1,2,3,4,5]])
+    inp = np.asarray([1, 2, 3, 4, 5])
 
     def get_reward(weights):
         global solution, model, inp

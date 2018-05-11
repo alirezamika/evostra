@@ -3,6 +3,9 @@ import numpy as np
 import multiprocessing as mp
 
 
+np.random.seed(0)
+
+
 def worker_process(arg):
     get_reward_func, weights = arg
     return get_reward_func(weights)
@@ -11,7 +14,7 @@ def worker_process(arg):
 class EvolutionStrategy(object):
     def __init__(self, weights, get_reward_func, population_size=50, sigma=0.1, learning_rate=0.03, decay=0.998,
                  num_threads=1):
-        np.random.seed(0)
+
         self.weights = weights
         self.get_reward = get_reward_func
         self.POPULATION_SIZE = population_size

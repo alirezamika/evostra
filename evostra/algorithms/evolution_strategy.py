@@ -55,11 +55,14 @@ class EvolutionStrategy(object):
         return rewards
 
     def _update_weights(self, rewards, population):
+        std = rewards.std()
+        if std == 0:
+            return
+        rewards = (rewards - rewards.mean()) / std
         for index, w in enumerate(self.weights):
             layer_population = np.array([p[index] for p in population])
             update_factor = self.learning_rate / (self.POPULATION_SIZE * self.SIGMA)
-            reshaped_rewards = rewards.reshape((-1,) + (1,) * (layer_population.ndim - 1))
-            self.weights[index] = w + update_factor * (reshaped_rewards * layer_population).sum(axis=0)
+            self.weights[index] = w + update_factor * np.dot(layer_population.T, rewards).T
 
     def run(self, iterations, print_step=10):
         pool = mp.Pool(self.num_threads) if self.num_threads > 1 else None

@@ -63,6 +63,7 @@ class EvolutionStrategy(object):
             layer_population = np.array([p[index] for p in population])
             update_factor = self.learning_rate / (self.POPULATION_SIZE * self.SIGMA)
             self.weights[index] = w + update_factor * np.dot(layer_population.T, rewards).T
+        self.learning_rate *= self.decay
 
     def run(self, iterations, print_step=10):
         pool = mp.Pool(self.num_threads) if self.num_threads > 1 else None
@@ -72,8 +73,6 @@ class EvolutionStrategy(object):
             rewards = self._get_rewards(pool, population)
 
             self._update_weights(rewards, population)
-
-            self.learning_rate *= self.decay
 
             if (iteration + 1) % print_step == 0:
                 print('iter %d. reward: %f' % (iteration + 1, self.get_reward(self.weights)))
